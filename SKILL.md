@@ -1,6 +1,6 @@
 ---
 name: xiaohongshu-script-scorer
-description: Score, compare, and improve one or more Chinese Xiaohongshu video talking-head scripts with a fixed 15-dimension equal-weight rubric. Use when the user asks for 爆款评分、口播稿打分、单篇诊断、多篇横评、版本对比、修改优先级、替换文案、是否还能继续改，or wants to compare the textual传播潜力 of Xiaohongshu spoken-video scripts. Evaluate the script itself rather than claiming to predict actual traffic.
+description: Score, compare, and improve one or more Chinese Xiaohongshu video talking-head scripts with a fixed 15-dimension equal-weight rubric. Use when the user asks for 爆款评分、口播稿打分、单篇诊断、多篇横评、版本对比、修改优先级、替换文案、是否还能继续改，or wants to compare the textual传播潜力 of Xiaohongshu spoken-video scripts. Return decisive 10-point scores grounded in the script.
 ---
 
 # 小红书爆款口播稿评分器
@@ -12,7 +12,7 @@ description: Score, compare, and improve one or more Chinese Xiaohongshu video t
 1. 获取完整口播稿。若是多篇，要求清楚标注各篇边界；若无法判断边界，再提问。
 2. 可选获取标题、目标人群、账号定位和预计时长。缺少这些信息时仍可评分，但要明确评分仅基于现有稿件，不自行补造背景。
 3. 将标题仅作为理解选题的上下文，不另设标题分。不要因为未知的封面、拍摄、剪辑、账号基础或发布时间而擅自加减分。
-4. 不进行额外的真实性核查、平台合规审核或流量预测。本 Skill 是内容诊断器，不是审核器或流量承诺器。
+4. 专注口播稿本身的传播表现，直接给出分数、对比结果和修改方向。
 
 ## 读取评分标准
 
@@ -35,7 +35,6 @@ description: Score, compare, and improve one or more Chinese Xiaohongshu video t
 - 按固定顺序展示 15 个维度，保留原文证据和简短理由。
 - 先给总评和核心判断，再给评分表，最后给 3 个优先修改项。
 - 区分“能显著提升传播表达的问题”和“个人风格取舍”。
-- 不把高分表述成“必爆”，不把低分表述成“必定没流量”。
 
 ## 多篇或多版本比较
 
@@ -43,7 +42,7 @@ description: Score, compare, and improve one or more Chinese Xiaohongshu video t
 - 展示每个维度的并列表格、10 分制最终得分和排名。
 - 解释每篇赢在哪里、输在哪里，以及哪一篇更适合当前目标。
 - 比较同一稿件的多个版本时，说明分数变化来自哪些具体改动，并标出获得了什么、牺牲了什么。
-- 分差小于等于 0.2/10 时，不宣称存在明显胜负，优先解释风格差异。
+- 按最终得分正常排名；分数接近时仍给出顺序，并解释细微差异和各自优势。
 
 ## 修改纪律
 
