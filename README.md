@@ -99,6 +99,12 @@ git clone https://github.com/lei-dao/xiaohongshu-script-scorer.git ~/.codex/skil
 - 保留作者原意、口吻和事实边界，不虚构经历、案例、数据或结果。
 - 不把高分解释成“必爆”，也不把低分解释成“必定没有流量”。
 
+## 进群交流
+
+如果你想交流评分维度、使用方法或口播稿修改经验，可以扫描下方二维码添加微信，进群一起交流。
+
+<img src="./assets/wechat-group-qr.jpg" alt="进群交流微信二维码" width="420">
+
 ## 文件结构
 
 ```text
@@ -107,6 +113,8 @@ xiaohongshu-script-scorer/
 ├── SKILL.md
 ├── agents/
 │   └── openai.yaml
+├── assets/
+│   └── wechat-group-qr.jpg
 └── references/
     ├── scoring-rubric.md
     └── output-formats.md
@@ -117,3 +125,4 @@ xiaohongshu-script-scorer/
 - `references/scoring-rubric.md`：15 个维度的完整评分锚点与边界。
 - `references/output-formats.md`：单篇、多篇和多版本的输出格式。
 - `agents/openai.yaml`：Skill 的展示名称和默认调用提示。
+- `assets/wechat-group-qr.jpg`：进群交流二维码。
