@@ -1,0 +1,4 @@
+interface:
+  display_name: "小红书爆款口播稿评分器"
+  short_description: "对单篇或多篇小红书视频口播稿进行十五维评分、比较与修改建议"
+  default_prompt: "使用 $xiaohongshu-viral-script-scorer 评分并比较这些小红书视频口播稿，指出最值得修改的三处。"
