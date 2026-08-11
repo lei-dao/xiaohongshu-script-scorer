@@ -1,5 +1,5 @@
 ---
-name: xiaohongshu-viral-script-scorer
+name: xiaohongshu-script-scorer
 description: Score, compare, and improve one or more Chinese Xiaohongshu video talking-head scripts with a fixed 15-dimension equal-weight rubric. Use when the user asks for 爆款评分、口播稿打分、单篇诊断、多篇横评、版本对比、修改优先级、替换文案、是否还能继续改，or wants to compare the textual传播潜力 of Xiaohongshu spoken-video scripts. Evaluate the script itself rather than claiming to predict actual traffic.
 ---
 
@@ -23,7 +23,7 @@ description: Score, compare, and improve one or more Chinese Xiaohongshu video t
 1. 先通读全文，提炼一句核心判断、目标人群和稿件承诺。
 2. 从原文提取评分证据，再逐项评分。不要先凭整体印象给总分。
 3. 对 15 个维度分别给出 1–10 分，可用 0.5 分；所有维度等权。
-4. 按 `总分 = 15 项之和` 计算满分 150 分，同时给出 `平均分 = 总分 ÷ 15`。不得加入隐藏权重或主观加分。
+4. 按 `最终得分 = 15 项分数之和 ÷ 15` 计算 10 分制得分，保留一位小数。不得展示 150 分制总分，不得加入隐藏权重或主观加分。
 5. 每项评分只使用该维度的定义，避免同一问题重复扣分。若一个片段影响多个维度，分别解释不同影响机制。
 6. 高分必须有原文证据。没有明确证据时不得给 9 分以上；10 分只用于极少数几乎无明显改进空间的表现。
 7. 评分后指出最强 3 项与最弱 3 项，再选出最值得改的 3 处。优先级考虑传播影响、修改确定性和副作用，而非机械选择最低分。
@@ -40,10 +40,10 @@ description: Score, compare, and improve one or more Chinese Xiaohongshu video t
 ## 多篇或多版本比较
 
 - 对所有稿件使用完全相同的量尺，先独立评分，再横向比较；不得按参赛篇数强行拉开差距。
-- 展示每个维度的并列表格、总分、平均分和排名。
+- 展示每个维度的并列表格、10 分制最终得分和排名。
 - 解释每篇赢在哪里、输在哪里，以及哪一篇更适合当前目标。
 - 比较同一稿件的多个版本时，说明分数变化来自哪些具体改动，并标出获得了什么、牺牲了什么。
-- 分差小于等于 3/150 时，不宣称存在明显胜负，优先解释风格差异。
+- 分差小于等于 0.2/10 时，不宣称存在明显胜负，优先解释风格差异。
 
 ## 修改纪律
 
