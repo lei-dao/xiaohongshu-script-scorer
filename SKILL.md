@@ -1,6 +1,6 @@
 ---
 name: xiaohongshu-script-scorer
-description: Score, compare, and improve one or more Chinese Xiaohongshu video talking-head scripts with a fixed 15-dimension equal-weight rubric. Use when the user asks for 爆款评分、口播稿打分、单篇诊断、多篇横评、版本对比、修改优先级、替换文案、是否还能继续改，or wants to compare the textual传播潜力 of Xiaohongshu spoken-video scripts. Return decisive 10-point scores grounded in the script.
+description: Score, compare, and improve Chinese Xiaohongshu video talking-head scripts with a 15-dimension, equal-weight, 10-point rubric. Use for single-script diagnosis, multi-script comparison, version benchmarking, editing priorities, replacement copy, and deciding whether to keep revising.
 ---
 
 # 小红书爆款口播稿评分器
